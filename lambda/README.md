@@ -97,4 +97,3 @@ def handler(event, context):
 Hit Save. Now we could Test the function, but first we need a test template, click Test and choose S3 Put request, and name it Upload, the template will be shown, change the name of the bucket with your bucket name: images-XXXXX , there two of them. Then change the object name `test/key` with the filename you uploaded before. Now you could click Test and you will see the result, which should be success. If you now visit the S3 bucket with images-XXXXX-resized name, you see the resized version of your image.
 
 You could now upload another hight resolution image and trigger your lambda function.
-
