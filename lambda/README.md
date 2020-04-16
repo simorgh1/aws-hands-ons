@@ -33,7 +33,7 @@ The lambda function needs permission to access s3 and write its logs into CloudW
 
 Go to IAM, Roles, Create Role with the name 'lambda-execution-role', then create an inline policy 'lambda-execution-policy' and attach it to the role. the policy have the following content:
 
-´´´json
+```json
 {
     "Version": "2012-10-17",
     "Statement": [
@@ -54,7 +54,7 @@ Go to IAM, Roles, Create Role with the name 'lambda-execution-role', then create
         }
     ]
 }
-´´´
+```
 
 #### S3 buckets
 
@@ -94,6 +94,12 @@ def handler(event, context):
 
 ```
 
-Hit Save. Now we could Test the function, but first we need a test template, click Test and choose S3 Put request, and name it Upload, the template will be shown, change the name of the bucket with your bucket name: images-XXXXX , there two of them. Then change the object name `test/key` with the filename you uploaded before. Now you could click Test and you will see the result, which should be success. If you now visit the S3 bucket with images-XXXXX-resized name, you see the resized version of your image.
+Hit `Save`.
 
-You could now upload another hight resolution image and trigger your lambda function.
+Now we could Test the function, but first we need a test template, click `Test` and choose `S3 Put` Event template and name it Upload, the template will be shown, change the name of the bucket with your bucket name: `images-XXXXX`, there are two of them.
+
+Then change the object name `test/key` with the filename you uploaded before. Click Test and you will see the execution result, which should be succeeded. If you now visit the S3 bucket with `images-XXXXX-resized` name, you see the resized version of your image.
+
+You could upload another hight resolution image and trigger your lambda function.
+
+Please have a look into the monitoring and logging tab and check the execution logs.
