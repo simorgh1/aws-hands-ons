@@ -1,3 +1,4 @@
+// Update this with your API Gateway endpoint URL
 var API_ENDPOINT = "https://e2uu4kh0y1.execute-api.us-west-2.amazonaws.com/Dev";
 
 document.getElementById("sayButton").onclick = function () {
@@ -43,20 +44,20 @@ document.getElementById("searchButton").onclick = function () {
         $("#posts").append(
           "<tr> \
 								<td>" +
-            data["id"] +
-            "</td> \
+          data["id"] +
+          "</td> \
 								<td>" +
-            data["voice"] +
-            "</td> \
+          data["voice"] +
+          "</td> \
 								<td>" +
-            data["text"] +
-            "</td> \
+          data["text"] +
+          "</td> \
 								<td>" +
-            data["status"] +
-            "</td> \
+          data["status"] +
+          "</td> \
 								<td>" +
-            player +
-            "</td> \
+          player +
+          "</td> \
 								</tr>"
         );
       });
