@@ -49,7 +49,6 @@ then add inline policy, lambda-execution-policy:
 
 ```json
 {
-  {
     "Version": "2012-10-17",
     "Statement": [
         {
@@ -129,7 +128,7 @@ Save and Deploy API from the Actions menu. name the stage _Dev_. Copy the invoke
 
 ### Create a Serverless User Interface
 
-- Goto web folder and update _API_ENDPOINT_ in _scripts.js_ with the _Invoke URL_ you copied earlier.
+- Goto web folder and update API_ENDPOINT in scripts.js with the Invoke URL you copied earlier.
 - Create an S3 bucket named www-{BUCKET}, use the name of audioposts bucket, deselect the Block all public access option and update the Bucket Policy with:
 
 ```json
