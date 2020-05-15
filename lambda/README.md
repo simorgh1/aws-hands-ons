@@ -21,4 +21,8 @@ AWS resources such s3 events, dynamo db operations, message queueing. AWS Lambda
 
 ## Resize image
 
+Using S3 and lambda function we [resize an image](resize-image) after upload and save it into a S3 Bucket.
+
 ## Text to Speech
+
+[Serverless Application](text-to-speech) that converts a text into speech with the selected voice language.
